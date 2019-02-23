@@ -111,7 +111,13 @@ class Weather extends Component {
     if (this.state.error !== "") {
       showResult = (
         <div className="error">
-          <span className="error-text">Error: {this.state.error}</span>
+          <span className="error-text">
+            Error: <br />
+            {this.state.error}
+            <br />
+            Please reload the page, enter a valid API Key for OpenWeatherMap and
+            try again.
+          </span>
         </div>
       );
     }
