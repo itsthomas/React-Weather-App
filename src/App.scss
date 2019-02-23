@@ -1,0 +1,106 @@
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+html,
+body {
+  height: 100vh;
+
+  .container-fluid {
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+
+    .left {
+      height: 40vh;
+      background-image: url("components/Title/landscape.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      overflow: hidden;
+
+      @include media-breakpoint-up(lg) {
+        height: 100vh;
+      }
+
+      .text-container {
+        margin-top: 10%;
+        color: white;
+        text-shadow: 2px 2px 10px #290539;
+
+        @include media-breakpoint-up(lg) {
+          margin-top: 12%;
+        }
+      }
+      .sub-text {
+        max-width: 370px;
+        text-align: center;
+        margin: 0 auto;
+
+        @include media-breakpoint-down(sm) {
+          background: rgba(255, 255, 255, 0.7);
+          color: #000;
+          text-shadow: none;
+          border-radius: 10px;
+          padding: 10px;
+        }
+      }
+    }
+
+    .right {
+      height: 60vh;
+      background-color: rgb(73, 11, 78);
+
+      @include media-breakpoint-up(lg) {
+        height: 100vh;
+        padding: 0 40px;
+      }
+
+      .form-container {
+        margin-top: 10%;
+
+        @include media-breakpoint-up(sm) {
+          margin-top: 5%;
+        }
+      }
+
+      .weather-result,
+      .error {
+        margin-top: 10px;
+        color: #fff;
+        list-style-type: none;
+        text-align: left;
+        padding-left: 0;
+
+        @include media-breakpoint-up(lg) {
+          margin-top: 40px;
+        }
+      }
+
+      .list-title {
+        color: #ffc107;
+      }
+
+      .error-text {
+        color: #ec5f3d;
+      }
+
+      .weather-icon {
+        min-width: 60px;
+      }
+    }
+  }
+}
+
+.sweetalert {
+  h2 {
+    font-size: 1.6rem;
+  }
+  .text-muted {
+    margin: 18px 0 10px;
+  }
+}
+
+* {
+  transition: all 0.4s linear;
+}
